@@ -1,0 +1,344 @@
+/* --- GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+    
+    /* BACKGROUND: Starry Night at Banayad na Glow (Pure CSS, Walang Lag) */
+    background-image: 
+        radial-gradient(1.5px 1.5px at 15% 20%, #ffffff 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 35% 65%, #ffffff 50%, transparent 100%),
+        radial-gradient(1px 1px at 55% 15%, #ffffff 50%, transparent 100%),
+        radial-gradient(2px 2px at 75% 45%, #ffffff 50%, transparent 100%),
+        radial-gradient(1px 1px at 85% 85%, #ffffff 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 10% 80%, #ffffff 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 95% 25%, #ffffff 50%, transparent 100%),
+        radial-gradient(1px 1px at 45% 90%, #ffffff 50%, transparent 100%),
+        radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 85%, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+    background-size: 
+        200px 200px, 250px 250px, 150px 150px, 300px 300px, 
+        100px 100px, 200px 200px, 150px 150px, 250px 250px, 
+        100% 100%, 100% 100%, 100% 100%;
+    background-attachment: fixed;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 2px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+nav .logo img { height: 50px; }
+
+nav .links a {
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #d4af37;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+nav .links a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('logo.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-color: #000;
+    padding: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.hero-vignette {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premium-badge {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    background: linear-gradient(to right, #d4af37, #fff8b0, #d4af37); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 1)); 
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    color: #eee;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 10px #000; 
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #8a2be2, #ff00ff);
+    color: white;
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 0, 255, 1);
+}
+
+.btn-secondary {
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #d4af37;
+    color: #000;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+    transform: translateY(-3px);
+}
+
+/* --- PRODUCTS SECTION --- */
+.products {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.products h2::after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background: #ff00ff;
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #111; 
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: #ff00ff;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #000;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 3px solid #8a2be2;
+    position: relative;
+    z-index: 2;
+}
+
+footer h2 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #888;
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ff00ff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* =========================================
+   MODAL (PARA SA MALAKING PICTURE)
+   ========================================= */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh; 
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.5); 
+    animation: zoomIn 0.3s ease; 
+}
+
+#caption {
+    margin-top: 20px;
+    color: #d4af37;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

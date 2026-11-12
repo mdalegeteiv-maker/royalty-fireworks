@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royalty Fireworks | Premium Quality</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Royalty Fireworks Logo">
+        </div>
+        <div class="links">
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-vignette"></div>
+        <div class="hero-text">
+            <div class="premium-badge">★ PREMIUM QUALITY ★</div>
+            <h1>LIGHT UP THE SKY</h1>
+            <p>Premium Quality Fireworks for Every Celebration</p>
+            
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">View Collection</a>
+                <a href="#contact" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products">
+        <h2>Our Best Sellers</h2>
+        
+        <div class="product-grid">
+
+            <!-- 1. Super OG Puno -->
+            <div class="card">
+                <img src="super-og.png" alt="Super OG Puno" onclick="openModal(this.src, 'Super OG Puno')">
+                <h3>Super OG Puno</h3>
+                <p>Pure power and brilliance in every blast.</p>
+            </div>
+
+            <!-- 2. Whistle Bomb -->
+            <div class="card">
+                <img src="whistle-bomb.png" alt="Whistle Bomb" onclick="openModal(this.src, 'Whistle Bomb')">
+                <h3>Whistle Bomb</h3>
+                <p>Big, Titanium, and Special variants.</p>
+            </div>
+
+            <!-- 3. Rapid Higad -->
+            <div class="card">
+                <img src="rapid-higad.png" alt="Rapid Higad" onclick="openModal(this.src, 'Rapid Higad')">
+                <h3>Rapid Higad</h3>
+                <p>Fast-paced, non-stop action.</p>
+            </div>
+
+            <!-- 4. 5 Star Pakete -->
+            <div class="card">
+                <img src="5-star.png" alt="5 Star Pakete" onclick="openModal(this.src, '5 Star Pakete')">
+                <h3>5 Star Pakete</h3>
+                <p>The complete package for a grand display.</p>
+            </div>
+
+            <!-- 5. Special Kwitis -->
+            <div class="card">
+                <img src="special-kwitis.png" alt="Special Kwitis" onclick="openModal(this.src, 'Special Kwitis')">
+                <h3>Special Kwitis</h3>
+                <p>Classic Filipino fireworks. High quality sticks.</p>
+            </div>
+
+            <!-- 6. Whistle Rocket -->
+            <div class="card">
+                <img src="whistle-rocket.png" alt="Whistle Rocket" onclick="openModal(this.src, 'Whistle Rocket')">
+                <h3>Whistle Rocket</h3>
+                <p>Loud whistles and high flights for maximum thrill.</p>
+            </div>
+
+            <!-- 7. Big Kwitis -->
+            <div class="card">
+                <img src="big-kwitis.png" alt="Big Kwitis" onclick="openModal(this.src, 'Big Kwitis')">
+                <h3>Big Kwitis</h3>
+                <p>Bigger and bolder classic fireworks.</p>
+            </div>
+
+            <!-- 8. Super Thunder Sawa -->
+            <div class="card">
+                <img src="super-thunder.png" alt="Super Thunder Sawa" onclick="openModal(this.src, 'Super Thunder Sawa')">
+                <h3>Super Thunder Sawa</h3>
+                <p>More powerful with slightly paced blasts.</p>
+            </div>
+
+            <!-- 9. Rapid Thunder Sawa -->
+            <div class="card">
+                <img src="rapid-thunder.png" alt="Rapid Thunder Sawa" onclick="openModal(this.src, 'Rapid Thunder Sawa')">
+                <h3>Rapid Thunder Sawa</h3>
+                <p>Fast-paced bursts for non-stop blasts!</p>
+            </div>
+
+            <!-- 10. OG Thunder Sawa -->
+            <div class="card">
+                <img src="og-thunder.png" alt="OG Thunder Sawa" onclick="openModal(this.src, 'OG Thunder Sawa')">
+                <h3>OG Thunder Sawa</h3>
+                <p>3 Ultimate Firecrackers in 1. Limited Edition!</p>
+            </div>
+
+            <!-- 11. Titanium Sawa -->
+            <div class="card">
+                <img src="titanium-sawa.png" alt="Titanium Sawa" onclick="openModal(this.src, 'Titanium Sawa')">
+                <h3>Titanium Sawa</h3>
+                <p>Pure power and brilliance in every blast!</p>
+            </div>
+
+            <!-- 12. Titanium Sawa (Variant 2) -->
+            <div class="card">
+                <img src="titanium-sawa-2.png" alt="Titanium Sawa" onclick="openModal(this.src, 'Titanium Sawa (V2)')">
+                <h3>Titanium Sawa (V2)</h3>
+                <p>Pure power and brilliance in every blast!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <h2>Royalty Fireworks</h2>
+        <p>📍 Bocaui, Bulacan</p>
+        <p>Follow us on Facebook: <a href="https://www.facebook.com/royalty.fireworks" target="_blank">@royalty.fireworks</a></p>
+        <p>&copy; 2024 Royalty Fireworks. All Rights Reserved.</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- SCRIPT PARA SA MODAL -->
+    <script>
+        function openModal(src, title) {
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("expandedImg").src = src;
+            document.getElementById("caption").innerHTML = title;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
